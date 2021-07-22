@@ -1,3 +1,5 @@
+4d1da87 Thu Jul 22 19:10:59 2021 -0400 Fixed vulnerability trim-newlines
+094b806 Thu Jul 22 18:38:15 2021 -0400 Was added some of style.
 e95cbe4 Thu Jul 22 18:05:17 2021 -0400 Update articles_controller.rb
 07ecc0b Thu Jul 22 17:49:04 2021 -0400 Was solved exercise rails-wikinimous
 e60b220 Thu Jul 22 17:23:01 2021 -0400 first approximation to the solution of the exercise
