@@ -1,0 +1,12 @@
+<h1>Edit an existing article</h1>
+
+<%= form_for(@article) do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br><br>
+  <%= f.label :Content %><br>
+  <%= f.text_area :content, size: "70x5", placeholder: "Body of article"  %><br><br>
+  <%= f.submit %>
+<% end %>
+<hr>
+<br><br>
+<%= link_to 'Back to list', '/articles' %>

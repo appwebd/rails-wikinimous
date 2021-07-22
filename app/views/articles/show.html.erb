@@ -1,0 +1,27 @@
+<article>
+  <h1>
+    <%= @article.title %>
+    <small>
+      <a href="/articles/<%= @article.id %>/edit">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
+    </small>
+    <small>
+      <%= link_to "<i class=\"fas fa-trash\"></i>", "article/delete", :method => 'delete' %>
+
+      <%= link_to do %>
+        <i class="fas fa-trash"></i>
+      <% end
+       { method: "delete", confirm: "Are you sure?", disable_with: "Processing ..." } %>
+
+    </small>
+  </h1>
+  <hr>
+  <p>
+    <%= @article.content %>
+  </p>
+
+</article>
+<hr>
+<br><br>
+<%= link_to 'Back to list', '/articles' %>

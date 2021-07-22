@@ -1,0 +1,10 @@
+<% @articles.each do |item| %>
+  <article>
+    <h2><%= link_to item.title, "articles/#{item.id}" %></h2><br>
+    <%= item.content %>
+  </article>
+<% end %>
+
+<br><br>
+
+<%= link_to 'Add a new article', 'articles/new' %>
