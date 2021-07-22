@@ -1,26 +1,28 @@
-<article>
-  <h1>
-    <%= @article.title %>
+<div class="container">
+  <article>
+    <h1>
+      <%= @article.title %>
 
-    <small>
-      <%= link_to "#{@article.id}/edit", :method => :get, :title => "Update  #{@article.title}" do %>
-        <i class="fas fa-pencil-alt"></i>
-      <% end %>
-    </small>
-    <small>
+      <small>
+        <%= link_to "#{@article.id}/edit", :method => :get, :title => "Update  #{@article.title}" do %>
+          <i class="fas fa-pencil-alt"></i>
+        <% end %>
+      </small>
+      <small>
 
-      <%= link_to @article, :method => :delete, :title => "Delete #{@article.title}", data: {:confirm => "You sure?", disable_with: "Processing ..." } do %>
-        <i class="fas fa-trash"></i>
-      <% end %>
+        <%= link_to @article, :method => :delete, :title => "Delete #{@article.title}", data: { :confirm => "You sure?", disable_with: "Processing ..." } do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
 
-    </small>
-  </h1>
+      </small>
+    </h1>
+    <hr>
+    <p>
+      <%= @article.content %>
+    </p>
+
+  </article>
   <hr>
-  <p>
-    <%= @article.content %>
-  </p>
-
-</article>
-<hr>
-<br><br>
-<%= link_to 'Back to list', '/articles' %>
+  <br><br>
+  <%= link_to 'Back to list', '/articles' %>
+</div>

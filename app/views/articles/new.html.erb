@@ -1,12 +1,14 @@
-<h1>Edit an existing article</h1>
+<div class="container">
+  <h1>Edit an existing article</h1>
 
-<%= form_for(@article) do |f| %>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %><br><br>
-  <%= f.label :Content %><br>
-  <%= f.text_area :content, size: "70x5", placeholder: "Body of article"  %><br><br>
-  <%= f.submit %>
-<% end %>
-<hr>
-<br><br>
-<%= link_to 'Back to list', '/articles' %>
+  <%= form_for(@article) do |f| %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: 'form-control' %><br>
+    <%= f.label :Content %><br>
+    <%= f.text_area :content, size: "70x5", placeholder: "Body of article", class: 'form-control' %><br><br>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+  <hr>
+  <br><br>
+  <%= link_to 'Back to list', '/articles' %>
+</div>*
