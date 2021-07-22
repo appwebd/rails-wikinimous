@@ -1,18 +1,17 @@
 <article>
   <h1>
     <%= @article.title %>
+
     <small>
-      <a href="/articles/<%= @article.id %>/edit">
+      <%= link_to "#{@article.id}/edit", :method => :get, :title => "Update  #{@article.title}" do %>
         <i class="fas fa-pencil-alt"></i>
-      </a>
+      <% end %>
     </small>
     <small>
-      <%= link_to "<i class=\"fas fa-trash\"></i>", "article/delete", :method => 'delete' %>
 
-      <%= link_to do %>
+      <%= link_to @article, :method => :delete, :title => "Delete #{@article.title}", data: {:confirm => "You sure?", disable_with: "Processing ..." } do %>
         <i class="fas fa-trash"></i>
-      <% end
-       { method: "delete", confirm: "Are you sure?", disable_with: "Processing ..." } %>
+      <% end %>
 
     </small>
   </h1>
