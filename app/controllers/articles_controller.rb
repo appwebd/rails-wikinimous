@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_find_task, only: %i[show edit update destroy]
+  before_action :set_find_article, only: %i[show edit update destroy]
 
   def index
     @articles = Article.all
@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :content)
   end
 
-  def set_find_task
+  def set_find_article
     @article = Article.find(params[:id])
   end
 end
