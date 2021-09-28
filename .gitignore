@@ -39,3 +39,5 @@ yarn-debug.log*
 .idea/*
 yarn.lock
 package-lock.json
+Gemfile.lock
+.Gemfile.lock
